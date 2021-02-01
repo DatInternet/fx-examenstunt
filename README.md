@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://datinternet.nl/media/datinternet/branding/datlogo.svg" height="30">
+  <img src="https://datinternet.nl/media/jorianfx/branding/logo.svg" height="30">
 </p>
 
 # VanRijn OS
