@@ -36,7 +36,9 @@ setTime();
 
 // [TASKBAR] Get and set date
 
-function getDate() {
+Taskbar_Date = document.getElementById("VanRijn_Taskbar_Date");
+
+function setDate() {
   var d = new Date();
   var Loos_Months = new Array(12);
   Loos_Months[0] = "Jan";
@@ -52,8 +54,15 @@ function getDate() {
   Loos_Months[10] = "Nov";
   Loos_Months[11] = "Dec";
   
+  var Current_Day = d.getDate();
   var Current_Month = Loos_Months[d.getDay()];
+  var Current_Year = d.getFullYear();
+
+  Taskbar_Date.innerText = Current_Day + "-" + Current_Month + "-" + Current_Year;
 }
+
+setInterval( setDate() , 1000);
+setDate();
 
 // [Notification]
 
@@ -61,16 +70,17 @@ var Notification_Counter = 0;
 
 function CreateNotification(name, desc, icon, type){
 
-  $('#notification_container').append('<div class="notification" id="notification' + Notification_Counter + '" data-hover="false"><div class="notification_image_container"><img src="'+ icon +'.png"></div><div class="notification_text_container"><p style="font-weight: bold;">' + name +'</p><p style="color: #a5a5a5">'+ desc + '</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification('+ Notification_Counter +');"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>');
+  var Notification_Template = '<div class="notification" id="notification' + Notification_Counter + '" data-hover="false"><div class="notification_image_container"><img src="'+ icon +'.png"></div><div class="notification_text_container"><p style="font-weight: bold;">' + name +'</p><p style="color: #a5a5a5">'+ desc + '</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification('+ Notification_Counter +');"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>';
   
+
+  $('#notification_container').append(NotificationTemplate({ counter: Notification_Counter, img: icon, name: name, desc: desc }));
+
   if (($('#VanRijn_ActionCenter_Notifications_' + icon).length)) {
-    $('#VanRijn_ActionCenter_Notifications_' + icon).append('<div class="notification" id="notification' + Notification_Counter + '" data-hover="false"><div class="notification_image_container"><img src="'+ icon +'.png"></div><div class="notification_text_container"><p style="font-weight: bold;">' + name +'</p><p style="color: #a5a5a5">'+ desc + '</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification('+ Notification_Counter +');"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>');
+    $('#VanRijn_ActionCenter_Notifications_' + icon).append(Notification_Template);
   } else {
     $('#VanRijn_ActionCenter_Notification_Container').append('<div id="VanRijn_ActionCenter_Notifications_' + icon + '"><div class="VanRijn_ActionCenter_Category"><span><img src="app.png">Application</span></div>');
-    $('#VanRijn_ActionCenter_Notifications_' + icon).append('<div class="notification" id="notification' + Notification_Counter + '" data-hover="false"><div class="notification_image_container"><img src="'+ icon +'.png"></div><div class="notification_text_container"><p style="font-weight: bold;">' + name +'</p><p style="color: #a5a5a5">'+ desc + '</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification('+ Notification_Counter +');"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>');
-
+    $('#VanRijn_ActionCenter_Notifications_' + icon).append(Notification_Template);
   }
-
 
   var ding = Notification_Counter;
 
@@ -128,3 +138,7 @@ function setNotiCount() {
 
 setInterval( setNotiCount , 1000);
 setNotiCount();
+
+// Templates
+
+var NotificationTemplate = Handlebars.compile('<div class="notification" id="notification{{counter}}" data-hover="false"><div class="notification_image_container"><img src="{{img}}.png"></div><div class="notification_text_container"><p style="font-weight: bold;">{{name}}</p><p style="color: #a5a5a5">{{desc}}</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification({{counter}});"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>');

@@ -92,7 +92,7 @@ body {
 }
 
 .VanRijn_Taskbar_Item {
-    width: 48px;
+    font-size: 12px;
     min-width: 48px;
     transition: 0.2s background-color;
     position: relative;
@@ -216,7 +216,7 @@ body {
 }
 
 .VanRijn_Taskbar_Clock_Container {
-    padding: 6px 6px 0px;
+    padding: 4px 6px 0px;
     min-width: 76px;
 }
 
@@ -409,6 +409,7 @@ body {
     width: 394px;
     position: fixed;
     right: 0px;
+    top: 0px;
     padding: 16px;
     background-color: rgba(var(--black), 0.8);
     height: calc(100% - 40px);
@@ -482,6 +483,55 @@ body {
     margin-right: 12px;
     height: 16px;
     vertical-align: sub;
+}
+
+/* Window */
+
+.VanRijn_Window_Container {
+    display: table;
+    border: 1px solid #707070;
+}
+
+.VanRijn_Window_Titlebar {
+    display: flex;
+    background-color: white;
+    user-select: none;
+}
+
+.VanRijn_Window_Titlebar_Title {
+    font-size: 14px;
+    display: inline;
+}
+
+.VanRijn_Window_Titlebar img {
+    width: 16px;
+    height: 16px;
+    vertical-align: baseline;
+    display: inline-block;
+    margin-top: 7px;
+    margin-bottom: -2px;
+    margin-right: 8px;
+    margin-left: 8px;    
+}
+
+.VanRijn_Window_Titlebar_Controls {
+    margin-left: auto;
+    position: relative;
+    height: 30px;
+}
+
+.VanRijn_Window_Titlebar_Controls button {
+    background: none;
+    border: none;
+    font-size: 10px;
+    display: inline-block;
+    height: 30px;
+    padding: 0px 19px;
+}
+
+.VanRijn_Window_Content {
+    background-color: rgb(var(--white));
+    padding: 12px;
 }
 
 /* Themes */

@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="http://cdn.arshen.ir/micon/3.0.168/dist/micon/css/micon.min.css">
 </head>
 <body class="VanRijn_Theme_10">
+    <div class="VanRijn_Window_Container">
+        <div class="VanRijn_Window_Titlebar">
+            <span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span>
+            <div class="VanRijn_Window_Titlebar_Controls">
+                <button>
+                    <i class="mi mi-ChromeMinimize"></i> 
+                </button>
+                <button>
+                    <i class="mi mi-ChromeMaximize"></i> 
+                </button>
+                <button>
+                    <i class="mi mi-ChromeClose"></i> 
+                </button>
+            </div>
+        </div>
+        <div class="VanRijn_Window_Content">
+            test
+        </div>
+    </div>
     <i class="mi mi-Settings"></i>
     <div id="VanRijn_ActionCenter">
         <div id="VanRijn_ActionCenter_Notification_Container">
@@ -16,7 +35,6 @@
                 <div class="VanRijn_ActionCenter_Category">
                     <span><img src="app.png">Application</span>
                 </div>
-    
             </div>
         </div>
         <div class="VanRijn_ActionCenter_Action_Container">
@@ -113,9 +131,18 @@
     <button onclick="CreateNotification('Mail Mail', 'description', 'mail', 'mail')">Make Mail Notification</button>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/scripts/jquery.ui.touch-punch.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+    // compile the template
+    var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+    // execute the compiled template and print the output to the console
+    console.log(template({ doesWhat: "rocks!" }));
+    </script>
     <script src="./Loos.js"></script>
     <script>
 
@@ -170,5 +197,6 @@ $.contextMenu({
     }
 });
     </script>
+        <script>$( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar" });</script>
 </body>
 </html>
