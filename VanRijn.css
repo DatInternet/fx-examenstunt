@@ -37,7 +37,18 @@
 
 }
 
-html {
+#VanRijn_Window_Container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#VanRijn_Background {
+    position: absolute;
     background-image: url('https://i.pinimg.com/originals/7a/99/fb/7a99fb55d4aa0aadd12d1c44e8f3ca50.png');
     /*background-image: url('https://wallpaperarc.com/wp-content/uploads/2020/05/Blue-Windows-10-Logo-Wallpaper-1920x1080-1.jpg');*/
     background-size: cover;
@@ -45,11 +56,29 @@ html {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    z-index: -1;
+}
+
+.OutOfBounce {
+    color: white;
+    position: absolute;
+}
+
+#OutOfBounceHor {
+    top: 20px;
+    right: -240px;
+}
+
+#OutOfBounceVer {
+    bottom: -40px;
+    left: 20px;
 }
 
 body {
+    overflow: hidden;
     margin: 0px;
     font-family: SegoeUI;
+    background-color: rgb(var(--theme-dark));
 }
 
 * {
@@ -488,8 +517,37 @@ body {
 /* Window */
 
 .VanRijn_Window_Container {
-    display: table;
+    position: absolute;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
     border: 1px solid #707070;
+    animation: Win_In 0.4s;
+}
+
+.VanRijn_Window_Out {
+    animation: Win_Out 0.4s;
+}
+
+@keyframes Win_In {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes Win_Out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    } to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
 }
 
 .VanRijn_Window_Titlebar {

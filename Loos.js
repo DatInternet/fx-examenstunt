@@ -1,3 +1,8 @@
+$( "inject" ).each(function() {
+  console.log($(this).attr("data-component"));
+  $(this).load("components/" + $(this).attr("data-component") + ".html")
+});
+
 // [GENERAL] Play Sound
 
 function playSound(type) {
@@ -25,7 +30,7 @@ Taskbar_Clock = document.getElementById("VanRijn_Taskbar_Clock");
 function getTime() {
   return new Date().toLocaleTimeString('en-US', { hour12: false, hour: 'numeric', minute: 'numeric' }).toString();
 }
-  
+  /*
 function setTime() {
   var time = getTime();
   Taskbar_Clock.innerText = time;
@@ -33,7 +38,7 @@ function setTime() {
   
 setInterval( setTime , 1000);
 setTime();
-
+*/
 // [TASKBAR] Get and set date
 
 Taskbar_Date = document.getElementById("VanRijn_Taskbar_Date");
@@ -72,7 +77,7 @@ function CreateNotification(name, desc, icon, type){
 
   var Notification_Template = '<div class="notification" id="notification' + Notification_Counter + '" data-hover="false"><div class="notification_image_container"><img src="'+ icon +'.png"></div><div class="notification_text_container"><p style="font-weight: bold;">' + name +'</p><p style="color: #a5a5a5">'+ desc + '</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification('+ Notification_Counter +');"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>';
   
-
+  //Maakt de notificatie
   $('#notification_container').append(NotificationTemplate({ counter: Notification_Counter, img: icon, name: name, desc: desc }));
 
   if (($('#VanRijn_ActionCenter_Notifications_' + icon).length)) {
@@ -141,4 +146,42 @@ setNotiCount();
 
 // Templates
 
+var WinCount = 0;
+
 var NotificationTemplate = Handlebars.compile('<div class="notification" id="notification{{counter}}" data-hover="false"><div class="notification_image_container"><img src="{{img}}.png"></div><div class="notification_text_container"><p style="font-weight: bold;">{{name}}</p><p style="color: #a5a5a5">{{desc}}</p></div><div class="notification_button_container"><button class="notification_button" onclick="RemoveNotification({{counter}});"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1115 1024l690 691-90 90-691-690-691 690-90-90 690-691-690-691 90-90 691 690 691-690 90 90z"/></svg></button><button class="notification_button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1955 1533l-931-930-931 930-90-90L1024 421l1021 1022z"/></svg></button></div></div>');
+
+
+// a
+
+function makeWin() {
+  
+  var Wincount1 = WinCount;
+  WinCount++
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
+  $( "body" ).prepend( TWindow );
+  $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container" });
+}
+
+/*$(function () {
+  $(".VanRijn_Window_Titlebar_Controls_Maximize").click(function (e) {
+    console.log(e.target.offsetParent.offsetParent.id)
+  });
+});*/
+
+$(function () {
+  $(document).on('click',".VanRijn_Window_Titlebar_Controls_Maximize", function(e){
+    console.log(e.target.offsetParent.parentNode.parentNode.id)
+  });
+});
+
+$(function () {
+  $(document).on('click',".VanRijn_Window_Titlebar_Controls_Close", function(e){
+    id = "#" + e.target.offsetParent.parentNode.parentNode.id;
+    document.getElementById(e.target.offsetParent.parentNode.parentNode.id).classList.add("VanRijn_Window_Out");
+    setTimeout(function (){
+      $(id).empty();
+      $(id).remove();
+      console.log(id);
+    }, 400);
+  });
+});
