@@ -162,11 +162,41 @@ function makeWin() {
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container" });
 }
 
+function makeWinDebugTheme() {
+  
+  var Wincount1 = WinCount;
+  WinCount++
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="width: 1400px;"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">DEBUG Skin Viewer</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content" id="VanRijn_Debug_Skin'+ Wincount1 +'"></div></div>'
+  $( "body" ).prepend( TWindow );
+  $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container" });
+  addColor(Wincount1)
+}
+
+themecount = 1;
+
+function addColor(winID) {
+  $(" #VanRijn_Debug_Skin" + winID).append('<div class="Debug_ThemeBox VanRijn_Theme_' + themecount +'" id="'+ themecount +'"></div>');
+  themecount++;
+  if (themecount >= 49) {
+    themecount = 1;
+  } else {
+    addColor(winID)
+  }
+}
+
 /*$(function () {
   $(".VanRijn_Window_Titlebar_Controls_Maximize").click(function (e) {
     console.log(e.target.offsetParent.offsetParent.id)
   });
 });*/
+
+$(function () {
+  $(document).on('click',".Debug_ThemeBox", function(e){
+    CreateNotification('DEBUG Skin viewer', 'Theme nummer ' + e.target.id + ' is gekozen', 'app', 'sound')
+    $("body").removeClass();
+    $("body").addClass("VanRijn_Theme_" + e.target.id);
+  });
+});
 
 $(function () {
   $(document).on('click',".VanRijn_Window_Titlebar_Controls_Maximize", function(e){
