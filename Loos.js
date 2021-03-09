@@ -3,6 +3,20 @@ $( "inject" ).each(function() {
   $(this).load("components/" + $(this).attr("data-component") + ".html")
 });
 
+jQuery.fn.center = function(parent) {
+  if (parent) {
+      parent = this.parent();
+  } else {
+      parent = window;
+  }
+  this.css({
+      "position": "absolute",
+      "top": ((($(parent).height() - this.outerHeight()) / 2) + $(parent).scrollTop() + "px"),
+      "left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
+  });
+return this;
+}
+
 // [GENERAL] Play Sound
 
 function playSound(type) {
@@ -157,8 +171,9 @@ function makeWin() {
   
   var Wincount1 = WinCount;
   WinCount++
-  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
   $( "body" ).prepend( TWindow );
+  $("#App" + Wincount1).center(true);
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container", scroll: false });
 }
 
@@ -170,6 +185,7 @@ function makeWinDebugTheme() {
   $( "body" ).prepend( TWindow );
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container" });
   addColor(Wincount1)
+  $("#App" + Wincount1).center(true);
 }
 
 themecount = 1;

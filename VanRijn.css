@@ -79,6 +79,7 @@ body {
     margin: 0px;
     font-family: SegoeUI;
     background-color: rgb(var(--theme-dark));
+    height: 100vh;
 }
 
 * {
