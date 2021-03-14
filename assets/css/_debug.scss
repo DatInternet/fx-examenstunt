@@ -1,0 +1,20 @@
+/* Watermark */
+
+#VanRijn_Watermark {
+    position: fixed;
+    text-align: right;
+    bottom: 42px;
+    right: 8px;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Theme Selector */
+
+.Debug_ThemeBox {
+    background-color: rgba(var(--theme-primary), 1) !important;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 12px;
+}

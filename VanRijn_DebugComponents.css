@@ -1,7 +1,0 @@
-.Debug_ThemeBox {
-    background-color: rgba(var(--theme-primary), 1) !important;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    margin: 12px;
-}

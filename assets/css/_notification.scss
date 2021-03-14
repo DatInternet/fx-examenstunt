@@ -1,0 +1,96 @@
+
+#notification_container {
+    position: fixed;
+    width: 386px;
+    padding: 12px;
+    right: 0px;
+    bottom: 26px;
+}
+
+.notification {
+    border: 1px solid rgba(71,71,71,0.6);
+    background-color: rgba(31,31,31,0.6);
+    color: white;
+    font-size: 14px;
+    width: 362px;
+    padding: 20px 0px;
+    position: relative;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    display: inline-block;
+    animation: ding 0.6s cubic-bezier(.22,1,.22,1);
+    backdrop-filter: blur(20px);
+}
+
+.notification_remove {
+    animation: ding_out 0.2s cubic-bezier(.22,1,.22,1) forwards;
+}
+
+.notification_image_container {
+    width: 48px;
+    height: 100%;
+    display: block;
+    float: left;
+    position: relative;
+    top: 0px;
+}
+
+.notification_image_container img {
+    width: 16px;
+    margin: 0px auto;
+    display: block;
+}
+
+.notification_text_container {
+    display: block;
+    width: 282px;
+    height: 100%;
+    float: left;
+}
+
+.notification_text_container p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 76px;
+}
+
+.notification_button_container {
+    display: block;
+    width: 24px;
+    height: 100%;
+    float: left;
+    position: relative;
+    top: -12px;
+}
+
+.notification_button {
+    font-size: 12px;
+    height: 24px;
+    padding: 6px;
+    fill: #a5a5a5;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: 0.2s;
+    margin-bottom: 0px;
+}
+
+.notification_button:hover {
+    color: #ffffff;
+}
+
+@keyframes ding {
+    from {
+        transform: translateX(376px);
+    } to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ding_out {
+    from {
+        transform: translateX(0px);
+    } to {
+        transform: translateX(376px);
+    }
+}

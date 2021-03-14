@@ -1,0 +1,77 @@
+/* Window */
+
+.VanRijn_Window_Container {
+    position: absolute;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border: 1px solid #707070;
+    animation: Win_In 0.4s;
+}
+
+.VanRijn_Window_Out {
+    animation: Win_Out 0.4s;
+}
+
+@keyframes Win_In {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes Win_Out {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    } to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+.VanRijn_Window_Titlebar {
+    display: flex;
+    background-color: white;
+    user-select: none;
+}
+
+.VanRijn_Window_Titlebar_Title {
+    font-size: 14px;
+    display: inline;
+}
+
+.VanRijn_Window_Titlebar img {
+    width: 16px;
+    height: 16px;
+    vertical-align: baseline;
+    display: inline-block;
+    margin-top: 7px;
+    margin-bottom: -2px;
+    margin-right: 8px;
+    margin-left: 8px;    
+}
+
+.VanRijn_Window_Titlebar_Controls {
+    margin-left: auto;
+    position: relative;
+    height: 30px;
+}
+
+.VanRijn_Window_Titlebar_Controls button {
+    background: none;
+    border: none;
+    font-size: 10px;
+    display: inline-block;
+    height: 30px;
+    padding: 0px 19px;
+}
+
+.VanRijn_Window_Content {
+    background-color: $white;
+    padding: 12px;
+}

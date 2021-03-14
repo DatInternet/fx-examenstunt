@@ -1,0 +1,482 @@
+
+/* Themes */
+
+.VanRijn_Theme_1 {
+    $theme-light-3: rgb(255, 211, 89);
+    $theme-light-2: rgb(255, 203, 60);
+    $theme-light-1: rgb(255, 194, 30);
+    $theme-primary: rgb(255, 185, 0);
+    $theme-dark-1: rgb(230, 164, 0);
+    $theme-dark-2: rgb(205, 143, 0);
+    $theme-dark-3: rgb(180, 121, 0);
+}
+
+.VanRijn_Theme_2 {
+    $theme-light-3: rgb(255, 183, 89);
+    $theme-light-2: rgb(255, 168, 60);
+    $theme-light-1: rgb(255, 154, 30);
+    $theme-primary: rgb(255, 140, 0);
+    $theme-dark-1: rgb(231, 121, 0);
+    $theme-dark-2: rgb(207, 101, 0);
+    $theme-dark-3: rgb(183, 82, 0);
+}
+
+.VanRijn_Theme_3 {
+    $theme-light-3: rgb(252, 156, 98);
+    $theme-light-2: rgb(250, 137, 69);
+    $theme-light-1: rgb(249, 118, 41);
+    $theme-primary: rgb(247, 99, 12);
+    $theme-dark-1: rgb(224, 82, 10);
+    $theme-dark-2: rgb(201, 65, 7);
+    $theme-dark-3: rgb(179, 47, 5);
+}
+
+.VanRijn_Theme_4 {
+    $theme-light-3: rgb(227, 144, 101);
+    $theme-light-2: rgb(219, 123, 73);
+    $theme-light-1: rgb(210, 101, 44);
+    $theme-primary: rgb(202, 80, 16);
+    $theme-dark-1: rgb(183, 65, 13);
+    $theme-dark-2: rgb(164, 50, 10);
+    $theme-dark-3: rgb(146, 35, 6);
+}
+
+.VanRijn_Theme_5 {
+    $theme-light-3: rgb(237, 131, 92);
+    $theme-light-2: rgb(231, 107, 62);
+    $theme-light-1: rgb(224, 83, 31);
+    $theme-primary: rgb(218, 59, 1);
+    $theme-dark-1: rgb(198, 47, 1);
+    $theme-dark-2: rgb(178, 35, 1);
+    $theme-dark-3: rgb(158, 24, 0);
+}
+
+.VanRijn_Theme_6 {
+    $theme-light-3: rgb(249, 160, 142);
+    $theme-light-2: rgb(245, 141, 121);
+    $theme-light-1: rgb(242, 123, 101);
+    $theme-primary: rgb(239, 105, 80);
+    $theme-dark-1: rgb(218, 86, 64);
+    $theme-dark-2: rgb(196, 67, 49);
+    $theme-dark-3: rgb(175, 47, 33);
+}
+
+.VanRijn_Theme_7 {
+    $theme-light-3: rgb(233, 126, 129);
+    $theme-light-2: rgb(225, 101, 104);
+    $theme-light-1: rgb(217, 77, 80);
+    $theme-primary: rgb(209, 52, 56);
+    $theme-dark-1: rgb(190, 42, 45);
+    $theme-dark-2: rgb(171, 31, 34);
+    $theme-dark-3: rgb(153, 21, 22);
+}
+
+.VanRijn_Theme_8 {
+    $theme-light-3: rgb(255, 135, 135);
+    $theme-light-2: rgb(255, 112, 113);
+    $theme-light-1: rgb(255, 90, 90);
+    $theme-primary: rgb(255, 67, 67);
+    $theme-dark-1: rgb(232, 54, 54);
+    $theme-dark-2: rgb(209, 40, 40);
+    $theme-dark-3: rgb(187, 27, 27);
+}
+
+.VanRijn_Theme_9 {
+    $theme-light-3: rgb(245, 138, 148);
+    $theme-light-2: rgb(241, 116, 127);
+    $theme-light-1: rgb(236, 94, 107);
+    $theme-primary: rgb(231, 72, 86);
+    $theme-dark-1: rgb(211, 58, 72);
+    $theme-dark-2: rgb(190, 43, 58);
+    $theme-dark-3: rgb(170, 29, 45);
+}
+
+.VanRijn_Theme_10 {
+    $theme-light-3: rgb(246, 104, 117);
+    $theme-light-2: rgb(241, 75, 89);
+    $theme-light-1: rgb(237, 46, 62);
+    $theme-primary: rgb(232, 17, 35);
+    $theme-dark-1: rgb(211, 14, 28);
+    $theme-dark-2: rgb(190, 10, 21);
+    $theme-dark-3: rgb(169, 7, 14);
+}
+
+.VanRijn_Theme_11 {
+    $theme-light-3: rgb(247, 94, 156);
+    $theme-light-2: rgb(242, 62, 135);
+    $theme-light-1: rgb(238, 31, 115);
+    $theme-primary: rgb(234, 0, 94);
+    $theme-dark-1: rgb(213, 0, 80);
+    $theme-dark-2: rgb(192, 0, 67);
+    $theme-dark-3: rgb(172, 0, 53);
+}
+
+.VanRijn_Theme_12 {
+    $theme-light-3: rgb(223, 94, 149);
+    $theme-light-2: rgb(214, 62, 126);
+    $theme-light-1: rgb(204, 31, 104);
+    $theme-primary: rgb(195, 0, 82);
+    $theme-dark-1: rgb(177, 0, 70);
+    $theme-dark-2: rgb(159, 0, 58);
+    $theme-dark-3: rgb(142, 0, 47);
+}
+
+.VanRijn_Theme_13 {
+    $theme-light-3: rgb(243, 94, 186);
+    $theme-light-2: rgb(237, 62, 170);
+    $theme-light-1: rgb(232, 31, 155);
+    $theme-primary: rgb(227, 0, 140);
+    $theme-dark-1: rgb(207, 0, 123);
+    $theme-dark-2: rgb(186, 0, 107);
+    $theme-dark-3: rgb(166, 0, 90);
+}
+
+.VanRijn_Theme_14 {
+    $theme-light-3: rgb(220, 94, 173);
+    $theme-light-2: rgb(210, 62, 155);
+    $theme-light-1: rgb(201, 31, 137);
+    $theme-primary: rgb(191, 0, 119);
+    $theme-dark-1: rgb(173, 0, 104);
+    $theme-dark-2: rgb(156, 0, 89);
+    $theme-dark-3: rgb(138, 0, 74);
+}
+
+.VanRijn_Theme_15 {
+    $theme-light-3: rgb(221, 130, 211);
+    $theme-light-2: rgb(212, 105, 201);
+    $theme-light-1: rgb(203, 81, 190);
+    $theme-primary: rgb(194, 57, 179);
+    $theme-dark-1: rgb(176, 46, 161);
+    $theme-dark-2: rgb(157, 34, 144);
+    $theme-dark-3: rgb(139, 23, 126);
+}
+
+.VanRijn_Theme_16 {
+    $theme-light-3: rgb(197, 94, 185);
+    $theme-light-2: rgb(182, 63, 169);
+    $theme-light-1: rgb(168, 31, 153);
+    $theme-primary: rgb(154, 0, 137);
+    $theme-dark-1: rgb(138, 0, 122);
+    $theme-dark-2: rgb(122, 0, 107);
+    $theme-dark-3: rgb(106, 0, 92);
+}
+
+.VanRijn_Theme_17 {
+    $theme-light-3: rgb(88, 172, 237);
+    $theme-light-2: rgb(59, 155, 229);
+    $theme-light-1: rgb(29, 137, 222);
+    $theme-primary: rgb(0, 120, 215);
+    $theme-dark-1: rgb(0, 104, 198);
+    $theme-dark-2: rgb(0, 88, 180);
+    $theme-dark-3: rgb(0, 72, 163);
+}
+
+.VanRijn_Theme_18 {
+    $theme-light-3: rgb(89, 159, 213);
+    $theme-light-2: rgb(59, 139, 201);
+    $theme-light-1: rgb(30, 119, 189);
+    $theme-primary: rgb(0, 99, 177);
+    $theme-dark-1: rgb(0, 86, 163);
+    $theme-dark-2: rgb(0, 73, 148);
+    $theme-dark-3: rgb(0, 59, 134);
+}
+
+.VanRijn_Theme_19 {
+    $theme-light-3: rgb(184, 183, 238);
+    $theme-light-2: rgb(170, 168, 230);
+    $theme-light-1: rgb(156, 154, 223);
+    $theme-primary: rgb(142, 140, 216);
+    $theme-dark-1: rgb(121, 121, 198);
+    $theme-dark-2: rgb(100, 103, 180);
+    $theme-dark-3: rgb(78, 84, 163);
+}
+
+.VanRijn_Theme_20 {
+    $theme-light-3: rgb(162, 161, 236);
+    $theme-light-2: rgb(143, 143, 229);
+    $theme-light-1: rgb(125, 124, 221);
+    $theme-primary: rgb(107, 105, 214);
+    $theme-dark-1: rgb(87, 90, 196);
+    $theme-dark-2: rgb(67, 75, 178);
+    $theme-dark-3: rgb(48, 59, 160);
+}
+
+.VanRijn_Theme_21 {
+    $theme-light-3: rgb(182, 158, 216);
+    $theme-light-2: rgb(167, 138, 206);
+    $theme-light-1: rgb(151, 119, 195);
+    $theme-primary: rgb(135, 100, 184);
+    $theme-dark-1: rgb(118, 85, 168);
+    $theme-dark-2: rgb(100, 69, 152);
+    $theme-dark-3: rgb(83, 54, 136);
+}
+
+.VanRijn_Theme_22 {
+    $theme-light-3: rgb(171, 143, 207);
+    $theme-light-2: rgb(152, 121, 194);
+    $theme-light-1: rgb(134, 99, 182);
+    $theme-primary: rgb(116, 77, 169);
+    $theme-dark-1: rgb(100, 65, 154);
+    $theme-dark-2: rgb(84, 52, 139);
+    $theme-dark-3: rgb(69, 40, 123);
+}
+
+.VanRijn_Theme_23 {
+    $theme-light-3: rgb(210, 138, 221);
+    $theme-light-2: rgb(199, 116, 212);
+    $theme-light-1: rgb(188, 93, 203);
+    $theme-primary: rgb(177, 70, 194);
+    $theme-dark-1: rgb(159, 56, 176);
+    $theme-dark-2: rgb(141, 42, 158);
+    $theme-dark-3: rgb(124, 28, 140);
+}
+
+.VanRijn_Theme_24 {
+    $theme-light-3: rgb(185, 109, 195);
+    $theme-light-2: rgb(168, 80, 181);
+    $theme-light-1: rgb(152, 52, 166);
+    $theme-primary: rgb(136, 23, 152);
+    $theme-dark-1: rgb(121, 18, 137);
+    $theme-dark-2: rgb(105, 14, 122);
+    $theme-dark-3: rgb(90, 9, 106);
+}
+
+.VanRijn_Theme_25 {
+    $theme-light-3: rgb(85, 193, 217);
+    $theme-light-2: rgb(56, 180, 208);
+    $theme-light-1: rgb(28, 166, 198);
+    $theme-primary: rgb(0, 153, 188);
+    $theme-dark-1: rgb(0, 135, 171);
+    $theme-dark-2: rgb(0, 118, 154);
+    $theme-dark-3: rgb(0, 100, 138);
+}
+
+.VanRijn_Theme_26 {
+    $theme-light-3: rgb(115, 176, 198);
+    $theme-light-2: rgb(91, 159, 183);
+    $theme-light-1: rgb(68, 142, 169);
+    $theme-primary: rgb(45, 125, 154);
+    $theme-dark-1: rgb(36, 109, 140);
+    $theme-dark-2: rgb(27, 93, 126);
+    $theme-dark-3: rgb(18, 77, 112);
+}
+
+.VanRijn_Theme_27 {
+    $theme-light-3: rgb(84, 212, 221);
+    $theme-light-2: rgb(56, 202, 212);
+    $theme-light-1: rgb(28, 193, 204);
+    $theme-primary: rgb(0, 183, 195);
+    $theme-dark-1: rgb(0, 164, 176);
+    $theme-dark-2: rgb(0, 144, 157);
+    $theme-dark-3: rgb(0, 125, 137);
+}
+
+.VanRijn_Theme_28 {
+    $theme-light-3: rgb(88, 180, 183);
+    $theme-light-2: rgb(59, 163, 167);
+    $theme-light-1: rgb(31, 147, 151);
+    $theme-primary: rgb(3, 131, 135);
+    $theme-dark-1: rgb(2, 115, 119);
+    $theme-dark-2: rgb(2, 98, 103);
+    $theme-dark-3: rgb(1, 82, 88);
+}
+
+.VanRijn_Theme_29 {
+    $theme-light-3: rgb(86, 209, 188);
+    $theme-light-2: rgb(57, 199, 175);
+    $theme-light-1: rgb(29, 188, 161);
+    $theme-primary: rgb(0, 178, 148);
+    $theme-dark-1: rgb(0, 159, 129);
+    $theme-dark-2: rgb(0, 139, 110);
+    $theme-dark-3: rgb(0, 120, 91);
+}
+
+.VanRijn_Theme_30 {
+    $theme-light-3: rgb(87, 181, 169);
+    $theme-light-2: rgb(58, 165, 152);
+    $theme-light-1: rgb(30, 149, 134);
+    $theme-primary: rgb(1, 133, 116);
+    $theme-dark-1: rgb(1, 117, 100);
+    $theme-dark-2: rgb(1, 100, 84);
+    $theme-dark-3: rgb(0, 84, 68);
+}
+
+.VanRijn_Theme_31 {
+    $theme-light-3: rgb(88, 225, 160);
+    $theme-light-2: rgb(59, 218, 142);
+    $theme-light-1: rgb(29, 211, 124);
+    $theme-primary: rgb(0, 204, 106);
+    $theme-dark-1: rgb(0, 183, 88);
+    $theme-dark-2: rgb(0, 161, 70);
+    $theme-dark-3: rgb(0, 140, 51);
+}
+
+.VanRijn_Theme_32 {
+    $theme-light-3: rgb(100, 183, 132);
+    $theme-light-2: rgb(72, 168, 109);
+    $theme-light-1: rgb(44, 152, 85);
+    $theme-primary: rgb(16, 137, 62);
+    $theme-dark-1: rgb(13, 120, 50);
+    $theme-dark-2: rgb(10, 103, 37);
+    $theme-dark-3: rgb(6, 86, 25);
+}
+
+.VanRijn_Theme_33 {
+    $theme-light-3: rgb(172, 169, 169);
+    $theme-light-2: rgb(156, 152, 151);
+    $theme-light-1: rgb(139, 134, 134);
+    $theme-primary: rgb(122, 117, 116);
+    $theme-dark-1: rgb(105, 101, 100);
+    $theme-dark-2: rgb(89, 85, 84);
+    $theme-dark-3: rgb(72, 68, 68);
+}
+
+.VanRijn_Theme_34 {
+    $theme-light-3: rgb(154, 152, 151);
+    $theme-light-2: rgb(134, 132, 130);
+    $theme-light-1: rgb(113, 111, 109);
+    $theme-primary: rgb(93, 90, 88);
+    $theme-dark-1: rgb(80, 77, 76);
+    $theme-dark-2: rgb(67, 65, 63);
+    $theme-dark-3: rgb(54, 52, 51);
+}
+
+.VanRijn_Theme_35 {
+    $theme-light-3: rgb(157, 170, 190);
+    $theme-light-2: rgb(139, 153, 172);
+    $theme-light-1: rgb(122, 135, 155);
+    $theme-primary: rgb(104, 118, 138);
+    $theme-dark-1: rgb(83, 102, 126);
+    $theme-dark-2: rgb(62, 87, 114);
+    $theme-dark-3: rgb(42, 71, 103);
+}
+
+.VanRijn_Theme_36 {
+    $theme-light-3: rgb(142, 154, 169);
+    $theme-light-2: rgb(122, 134, 149);
+    $theme-light-1: rgb(101, 113, 128);
+    $theme-primary: rgb(81, 92, 107);
+    $theme-dark-1: rgb(65, 79, 98);
+    $theme-dark-2: rgb(49, 67, 89);
+    $theme-dark-3: rgb(32, 54, 80);
+}
+
+.VanRijn_Theme_37 {
+    $theme-light-3: rgb(142, 176, 167);
+    $theme-light-2: rgb(123, 158, 150);
+    $theme-light-1: rgb(105, 141, 132);
+    $theme-primary: rgb(86, 124, 115);
+    $theme-dark-1: rgb(69, 108, 99);
+    $theme-dark-2: rgb(52, 93, 83);
+    $theme-dark-3: rgb(34, 77, 66);
+}
+
+.VanRijn_Theme_38 {
+    $theme-light-3: rgb(133, 163, 156);
+    $theme-light-2: rgb(113, 143, 136);
+    $theme-light-1: rgb(92, 124, 116);
+    $theme-primary: rgb(72, 104, 96);
+    $theme-dark-1: rgb(58, 91, 83);
+    $theme-dark-2: rgb(43, 78, 69);
+    $theme-dark-3: rgb(29, 64, 56);
+}
+
+.VanRijn_Theme_39 {
+    $theme-light-3: rgb(140, 179, 93);
+    $theme-light-2: rgb(117, 162, 64);
+    $theme-light-1: rgb(95, 146, 34);
+    $theme-primary: rgb(73, 130, 5);
+    $theme-dark-1: rgb(60, 113, 4);
+    $theme-dark-2: rgb(47, 96, 3);
+    $theme-dark-3: rgb(33, 80, 2);
+}
+
+.VanRijn_Theme_40 {
+    $theme-light-3: rgb(102, 175, 102);
+    $theme-light-2: rgb(73, 158, 74);
+    $theme-light-1: rgb(45, 141, 45);
+    $theme-primary: rgb(16, 124, 16);
+    $theme-dark-1: rgb(13, 108, 13);
+    $theme-dark-2: rgb(10, 92, 10);
+    $theme-dark-3: rgb(6, 76, 6);
+}
+
+.VanRijn_Theme_41 {
+    $theme-light-3: rgb(170, 170, 170);
+    $theme-light-2: rgb(152, 152, 152);
+    $theme-light-1: rgb(135, 135, 135);
+    $theme-primary: rgb(118, 118, 118);
+    $theme-dark-1: rgb(102, 102, 102);
+    $theme-dark-2: rgb(86, 86, 86);
+    $theme-dark-3: rgb(69, 69, 69);
+}
+
+.VanRijn_Theme_42 {
+    $theme-light-3: rgb(144, 142, 141);
+    $theme-light-2: rgb(121, 120, 118);
+    $theme-light-1: rgb(99, 97, 95);
+    $theme-primary: rgb(76, 74, 72);
+    $theme-dark-1: rgb(65, 63, 62);
+    $theme-dark-2: rgb(54, 53, 51);
+    $theme-dark-3: rgb(44, 42, 41);
+}
+
+.VanRijn_Theme_43 {
+    $theme-light-3: rgb(154, 173, 180);
+    $theme-light-2: rgb(138, 156, 162);
+    $theme-light-1: rgb(121, 138, 144);
+    $theme-primary: rgb(105, 121, 126);
+    $theme-dark-1: rgb(84, 106, 112);
+    $theme-dark-2: rgb(63, 91, 99);
+    $theme-dark-3: rgb(42, 75, 85);
+}
+
+.VanRijn_Theme_44 {
+    $theme-light-3: rgb(135, 150, 157);
+    $theme-light-2: rgb(115, 128, 135);
+    $theme-light-1: rgb(94, 106, 112);
+    $theme-primary: rgb(74, 84, 89);
+    $theme-dark-1: rgb(59, 73, 80);
+    $theme-dark-2: rgb(44, 63, 72);
+    $theme-dark-3: rgb(30, 52, 63);
+}
+
+.VanRijn_Theme_45 {
+    $theme-light-3: rgb(155, 176, 155);
+    $theme-light-2: rgb(136, 158, 136);
+    $theme-light-1: rgb(118, 141, 118);
+    $theme-primary: rgb(100, 124, 100);
+    $theme-dark-1: rgb(80, 108, 82);
+    $theme-dark-2: rgb(61, 92, 64);
+    $theme-dark-3: rgb(41, 77, 45);
+}
+
+.VanRijn_Theme_46 {
+    $theme-light-3: rgb(142, 156, 145);
+    $theme-light-2: rgb(122, 136, 125);
+    $theme-light-1: rgb(102, 115, 104);
+    $theme-primary: rgb(82, 94, 84);
+    $theme-dark-1: rgb(66, 82, 69);
+    $theme-dark-2: rgb(49, 70, 54);
+    $theme-dark-3: rgb(33, 58, 38);
+}
+
+.VanRijn_Theme_47 {
+    $theme-light-3: rgb(180, 169, 132);
+    $theme-light-2: rgb(164, 152, 111);
+    $theme-light-1: rgb(148, 134, 90);
+    $theme-primary: rgb(132, 117, 69);
+    $theme-dark-1: rgb(116, 101, 55);
+    $theme-dark-2: rgb(99, 85, 41);
+    $theme-dark-3: rgb(83, 68, 28);
+}
+
+.VanRijn_Theme_48 {
+    $theme-light-3: rgb(178, 167, 148);
+    $theme-light-2: rgb(160, 150, 131);
+    $theme-light-1: rgb(143, 132, 113);
+    $theme-primary: rgb(126, 115, 95);
+    $theme-dark-1: rgb(110, 99, 76);
+    $theme-dark-2: rgb(94, 83, 57);
+    $theme-dark-3: rgb(79, 68, 38);
+}

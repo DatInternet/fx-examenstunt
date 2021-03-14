@@ -1,0 +1,195 @@
+/* Taskbar */
+
+#VanRijn_Taskbar {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 40px;
+    z-index: 10;
+    background-color: rgba($black, 0.6);
+    backdrop-filter: blur(20px);
+    color: $white;
+    font-size: 10px;
+}
+
+.VanRijn_Taskbar_Accent {
+    background-color: rgba($theme-dark-3, 0.6) !important;
+}
+
+#VanRijn_Taskbar_Left {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#VanRijn_Taskbar_Right {
+    display: flex;
+    margin-left: auto;
+}
+
+.VanRijn_Taskbar_Item {
+    font-size: 12px;
+    min-width: 48px;
+    transition: 0.2s background-color;
+    position: relative;
+    height: 40px;
+    display: inline-block;
+    fill: $white;
+}
+
+.VanRijn_Taskbar_Item_Right {
+    width: 26px;
+    min-width: 26px;
+}
+
+.VanRijn_Taskbar_Item_Small {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+#VanRijn_Taskbar_ActionCenter {
+    width: 40px;
+    min-width: 40px;
+}
+
+#VanRijn_Taskbar_ActionCenter_Icon_Filled {
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.VanRijn_Taskbar_ActionCenter_Icon_Filled_Show {
+    opacity: 1 !important;
+} 
+
+#VanRijn_Taskbar_ActionCenter_Count {
+    position: absolute;
+    border: 1.5px solid white;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0 ,0.5);
+    top: 6px;
+    right: -6px;
+}
+
+#VanRijn_Taskbar_ActionCenter_Count span {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.VanRijn_Taskbar_Item:hover {
+    background-color: rgba($white, 0.1);
+}
+
+.VanRijn_Taskbar_Icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.VanRijn_Taskbar_Icon img {
+    height: 100%;
+}
+
+.VanRijn_Taskbar_Startmenu:hover .VanRijn_Taskbar_Icon {
+    fill: $theme-light-1;
+}
+
+.VanRijn_Taskbar_Startmenu:active .VanRijn_Taskbar_Icon {
+    fill: $theme-primary;
+}
+
+.VanRijn_Taskbar_Item_Active::before, .VanRijn_Taskbar_Item_Active::after {
+    position: absolute;
+    display: block;
+    content: "   ";
+    left: 4px;
+    bottom: 0px;
+    width: 40px;
+    height: 2px;
+    transition: 0.3s;
+}
+
+.VanRijn_Taskbar_Item_Active::before {
+    background-color: $theme-light-3;
+}
+
+.VanRijn_Taskbar_Item_Active::after {
+    display: none;
+}
+
+.VanRijn_Taskbar_Item_Multiple::after {
+    display: block;
+    background-color: $theme-light-3;
+    z-index: 1002;
+    width: 30px;
+    border-right: 2px solid #00000070;
+}
+
+.VanRijn_Taskbar_Item_Multiple::before {
+    background-color: $theme-light-1;
+}
+
+.VanRijn_Taskbar_Item:hover::before {
+    width: 48px;
+    left: 0px;
+}
+
+.VanRijn_Taskbar_Item_Multiple:hover::after {
+    width: 40px;
+    left: 0px;
+}
+
+.VanRijn_Taskbar_Clock_Container {
+    padding: 4px 6px 0px;
+    min-width: 76px;
+}
+
+.VanRijn_Taskbar_Clock_Container span {
+    display: block;
+    width: 100%;
+    height: 12px;
+    text-align: center;
+    user-select: none;
+}
+
+.VanRijn_Taskbar_Clock_Container span:first-child {
+    margin-bottom: 2px;
+}
+
+.VanRijn_Taskbar_ContextMenu {
+    font-size: 14px !important;
+    border-radius: 0px !important;
+    border: 2px solid #b2b2b2 !important;
+    background-color: #2b2b2b !important;
+    padding: .25em 2px !important;
+    width: 310px !important;
+}
+
+.VanRijn_Taskbar_ContextMenu li {
+    background-color: transparent !important;
+    color: white !important;
+    padding: 0.6em 2.25em !important;
+}
+
+.VanRijn_Taskbar_ContextMenu .context-menu-hover {
+    background-color: #414141 !important;
+}
+
+.context-menu-icon::before {
+    color: white !important;
+    width: 2.25em !important;
+}
