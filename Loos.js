@@ -177,6 +177,28 @@ function makeWin() {
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container", scroll: false });
 }
 
+function virus() {
+  
+  var Wincount1 = WinCount;
+  WinCount++
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
+
+  $( "body" ).prepend( TWindow );
+  //var winWid = $( window ).width();
+  //var winHei = $( window ).height();
+  //var posx = (Math.random() * 10 < 5 ? "-" : "+") + Math.random() * 100 + "px";
+  //var posy = (Math.random() * 10 < 5 ? "-" : "+") + Math.random() * 100 + "px";
+  //var randomPos = "left" + (Math.random() * 10 < 5 ? "-" : "+") + Math.random() * 100 + " " + "top" + (Math.random() * 10 < 5 ? "-" : "+") + Math.random() * 100;
+  //$("#App" + Wincount1).css({top: posy, left: posx});
+  $("#App" + Wincount1).css({"left": Math.random() * window.outerWidth , "top": Math.random() * window.outerHeight});
+  $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container", scroll: false });
+  playSound('error');
+  setTimeout(function (){
+    virus()
+  }, 250);
+
+}
+
 function makeWinDebugTheme() {
   
   var Wincount1 = WinCount;
