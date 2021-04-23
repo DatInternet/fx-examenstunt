@@ -1,0 +1,42 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #04f702;
+}
+
+:root {
+  --value: 50px;
+  --size: 100px;
+}
+
+div {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+}
+
+#motion_track_topleft {
+  top: calc(0% + var(--value));
+  left: calc(0% + var(--value));
+}
+
+#motion_track_topright {
+  top: calc(0% + var(--value));
+  right: calc(0% + var(--value));
+}
+
+#motion_track_bottomleft {
+  bottom: calc(0% + var(--value));
+  left: calc(0% + var(--value));
+}
+
+#motion_track_bottomright {
+  bottom: calc(0% + var(--value));
+  right: calc(0% + var(--value));
+}
+
+#motion_track_center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

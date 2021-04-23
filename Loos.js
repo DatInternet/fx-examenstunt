@@ -1,3 +1,7 @@
+function tempgreen() {
+  document.location.href = '/green_screen';
+}
+
 $( "inject" ).each(function() {
   console.log($(this).attr("data-component"));
   $(this).load("components/" + $(this).attr("data-component") + ".html")
@@ -44,7 +48,7 @@ Taskbar_Clock = document.getElementById("VanRijn_Taskbar_Clock");
 function getTime() {
   return new Date().toLocaleTimeString('en-US', { hour12: false, hour: 'numeric', minute: 'numeric' }).toString();
 }
-  /*
+  
 function setTime() {
   var time = getTime();
   Taskbar_Clock.innerText = time;
@@ -52,7 +56,7 @@ function setTime() {
   
 setInterval( setTime , 1000);
 setTime();
-*/
+
 // [TASKBAR] Get and set date
 
 Taskbar_Date = document.getElementById("VanRijn_Taskbar_Date");
@@ -77,7 +81,7 @@ function setDate() {
   var Current_Month = Loos_Months[d.getDay()];
   var Current_Year = d.getFullYear();
 
-  Taskbar_Date.innerText = Current_Day + "-" + Current_Month + "-" + Current_Year;
+  Taskbar_Date.innerText = Current_Day + "-" + 'Apr' + "-" + Current_Year;
 }
 
 setInterval( setDate() , 1000);
