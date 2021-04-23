@@ -1,5 +1,5 @@
 function tempgreen() {
-  document.location.href = '/green_screen';
+  document.location.href = './green_screen';
 }
 
 $( "inject" ).each(function() {
