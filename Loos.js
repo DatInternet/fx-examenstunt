@@ -171,7 +171,7 @@ function makeWin() {
   
   var Wincount1 = WinCount;
   WinCount++
-  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content"><h2>Hahaha, you got hacked</h2></div></div>'
   $( "body" ).prepend( TWindow );
   $("#App" + Wincount1).center(true);
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container", scroll: false });
@@ -181,7 +181,7 @@ function virus() {
   
   var Wincount1 = WinCount;
   WinCount++
-  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">VanRijn Verkenner</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content">test</div></div>'
+  var TWindow = '<div class="VanRijn_Window_Container" id="App'+ Wincount1 +'" style="top: 40%; left: 55%"><div class="VanRijn_Window_Titlebar"><span class="VanRijn_Window_Titlebar_Title"><img src="app.png">LLBackdoorVirusV1.exe</span><div class="VanRijn_Window_Titlebar_Controls"><button><i class="mi mi-ChromeMinimize"></i> </button><button class="VanRijn_Window_Titlebar_Controls_Maximize"><i class="mi mi-ChromeMaximize"></i></button><button class="VanRijn_Window_Titlebar_Controls_Close"><i class="mi mi-ChromeClose"></i> </button></div></div><div class="VanRijn_Window_Content"><h2>Hahaha, you got hacked</h2></div></div>'
 
   $( "body" ).prepend( TWindow );
   //var winWid = $( window ).width();
@@ -192,7 +192,7 @@ function virus() {
   //$("#App" + Wincount1).css({top: posy, left: posx});
   $("#App" + Wincount1).css({"left": Math.random() * window.outerWidth , "top": Math.random() * window.outerHeight});
   $( ".VanRijn_Window_Container" ).draggable({ handle: ".VanRijn_Window_Titlebar", containment: "#VanRijn_Window_Container", scroll: false });
-  playSound('error');
+  //playSound('error');
   setTimeout(function (){
     virus()
   }, 250);
